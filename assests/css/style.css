@@ -21,6 +21,12 @@ section{
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 500;
+    transition: all ease-in-out 0.3s;
+}
+.btn_1:hover,
+.btn_1:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em #ad641d;
+  transform: translateY(-0.25em);
 }
 .navbar-nav .nav-item:not(:last-of-type){    
     padding-right: 15px;
@@ -76,6 +82,9 @@ section{
 .banner p.text-white{
     margin-bottom: 20px;
 }
+figure{
+    cursor: pointer;
+}
 .feature-image {
     height: 100px;
     display: flex;
@@ -91,13 +100,16 @@ figure figcaption h3 {
 figure figcaption p{
     line-height: 30px;
     letter-spacing: 1px;
+    height: 120px;
 }
 figure{
     padding: 20px;
     transition: 0.3s ease-in-out;
+    border-radius: 10px;
 }
 figure:hover{
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;    
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 .keepBooking{
     background-color: #ededed;
@@ -113,6 +125,7 @@ figure:hover{
 .service{
     background-color: #14171c;
 }
+
 .team{
     transition: ease-in-out 0.3s;
 }
@@ -125,7 +138,7 @@ figure:hover{
 .team h3{
     font-size: 16px;
     margin: 0;
-    transition:all ease-in-out 0.5s;
+    transition: all ease-in-out 0.3s;
 }
 .team .feature-image {
     height: 100px;
@@ -150,13 +163,50 @@ figure:hover{
 .team figure:hover .feature-image img{
     transform: scale(1.2);
 }
-.work-together{
-    min-height: 50vh;
+footer{
     background-color: #14171c;
-    text-align: center;    
-    padding-bottom: 200px;
 }
-.work-together h2.text-white {
+.footer{
+    min-height: 45vh;
+    text-align: center;
+    padding-bottom: 50px;
+    flex-direction: column;
+}
+.footer h2.text-white {
     font-size: 55px;
     margin-bottom: 20px;
+}
+.copyright {
+    padding: 10px 0;
+    color: #fff;
+    font-weight: 300;
+}
+.copyright p{    
+    position: relative;
+    width: max-content;
+    padding-top: 1px;
+    cursor: grab;
+}
+.copyright p::before{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 1px;
+    background-color: #fff;
+    top: -10;
+    transition: all ease-in-out 0.3s;    
+}
+.copyright p:hover::before{
+    width: 100%;
+}
+
+.stickyHeader{
+    top: 0;
+    position: sticky;
+    z-index: 998;
+    width: 100%;
+    /* margin: 0 5%; */
+    background: #fff;
+    box-shadow: rgba(12, 59, 21, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 10px;
 }
